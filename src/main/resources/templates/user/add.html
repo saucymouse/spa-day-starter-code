@@ -6,7 +6,8 @@
 </head>
 <body>
 <div class="form-group">
-    <form method="post">
+<!--    TODO I think the action may be incorrect-->
+    <form method="post" th:action="@{/user}">
         <p>Create username and password:</p>
         <label>E-mail: <br><input type="email" name="email" placeholder="Email" class="form-control"></label><br>
         <label>Username: <br><input type="text" name="username" placeholder="Enter username" class="form-control"></label><br>

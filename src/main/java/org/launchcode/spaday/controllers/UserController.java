@@ -26,9 +26,9 @@ public class UserController {
         model.addAttribute("password", user.getPassword());
 
         if (user.getPassword().equals(verify)) {
-            return "user/index.html";
+            return "user/index";
         } else {
-            return "user/add.html";
+            return "user/add";
         }
 
 
