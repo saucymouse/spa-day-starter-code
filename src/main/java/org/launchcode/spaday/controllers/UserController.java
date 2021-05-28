@@ -15,22 +15,19 @@ public class UserController {
     @GetMapping("add")
     public String displayAddUserForm(Model model) {
         model.addAttribute("title", "Add User");
-        return "user/add.html";
+        return "user/add";
     }
 
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
-        model.addAttribute("user", user);
-        model.addAttribute("verify", verify);
         model.addAttribute("username", user.getUsername());
-        model.addAttribute("password", user.getPassword());
-
-        if (user.getPassword().equals(verify)) {
+        model.addAttribute("email", user.getEmail());
+        if (verify.equals(user.getPassword())) {
+            model.addAttribute(user.getPassword());
             return "user/index";
         } else {
             return "user/add";
         }
-
 
     }
 
