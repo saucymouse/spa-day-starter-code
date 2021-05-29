@@ -1,5 +1,6 @@
 package org.launchcode.spaday;
 
+import org.launchcode.spaday.models.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

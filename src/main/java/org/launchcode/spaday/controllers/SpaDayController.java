@@ -1,6 +1,7 @@
 package org.launchcode.spaday.controllers;
 
 import org.launchcode.spaday.models.Client;
+import org.launchcode.spaday.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,9 @@ public class SpaDayController {
 
     @GetMapping
     public String customerForm () {
+        User user = new User();
+        System.out.println(user.getId());
+        System.out.println("it works");
         return "serviceSelection";
     }
 

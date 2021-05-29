@@ -5,13 +5,14 @@
     <title th:text="${title}">Add User</title>
 </head>
 <body>
+<p th:text="${error}"></p>
 <div class="form-group">
 <!--    TODO I think the action may be incorrect-->
     <form method="post">
         <div class="form-group"></div>
         <p>Create username and password:</p>
-        <label>E-mail: <br><input type="email" name="email" placeholder="Email" class="form-control"></label><br>
-        <label>Username: <br><input type="text" name="username" placeholder="Enter username" class="form-control"></label><br>
+        <label>E-mail: <br><input type="email" name="email" placeholder="Email" th:value="${email}" class="form-control"></label><br>
+        <label>Username: <br><input type="text" name="username" placeholder="Enter username" th:value="${username}"  class="form-control"></label><br>
         <label>Password: <br><input type="password" name="password" placeholder="Enter password" class="form-control"></label><br>
         <label>Verify password: <br><input type="password" name="verify" placeholder="Verify password" class="form-control"></label><br>
         <input type="submit" value="Submit">
