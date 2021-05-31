@@ -14,9 +14,6 @@ public class SpaDayController {
 
     @GetMapping
     public String customerForm () {
-        User user = new User();
-        System.out.println(user.getId());
-        System.out.println("it works");
         return "serviceSelection";
     }
 

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+<head th:replace="fragments :: head">
+
 </head>
 <body>
-<span>Welcome to the system, </span><span th:text='${username}'></span>
-<a th:href="@{/}">On your way to the beauty form</a>
+<span>Welcome to the system, </span><span th:text='${username}'></span><br>
+<a th:href="@{/}">Please select your services</a>
+<br>
+<th:block th:each="user : ${users}">
+    <a th:href="@{/user/detail/{id}(id=${user.id})}" th:text="${user.username}"></a>
+</th:block>
 </body>
 </html>

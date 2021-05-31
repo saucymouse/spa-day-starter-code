@@ -1,15 +1,20 @@
 package org.launchcode.spaday.models;
 
+import java.util.Date;
+import java.util.Objects;
+
 public class User {
     private String username;
     private String email;
     private String password;
+    private Date dateCreated;
     private int id;
     private int nextId = 1;
 
     public User() {
         this.id = nextId;
         nextId++;
+        this.dateCreated = new Date();
     }
 
     public User(String username, String email, String password) {
@@ -48,4 +53,9 @@ public class User {
     public int getId() {
         return id;
     }
+
+    public String getDateCreated() {
+        return dateCreated.toString();
+    }
+
 }
