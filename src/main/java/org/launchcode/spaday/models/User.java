@@ -9,7 +9,7 @@ public class User {
     private String password;
     private Date dateCreated;
     private int id;
-    private int nextId = 1;
+    private static int nextId = 1;
 
     public User() {
         this.id = nextId;
