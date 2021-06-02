@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
+<head th:replace="fragments :: head"></head>
 
-</head>
 <body>
-<p th:text="${username}"}></p>
-<p th:text="${email}"}></p>
+<p th:text="${username}"></p>
+<p th:text="${email}"></p>
 <p th:text="${dateCreated}"></p>
 <!--TODO how to go back?-->
 <a href="javascript:history.back()">Go Back</a>

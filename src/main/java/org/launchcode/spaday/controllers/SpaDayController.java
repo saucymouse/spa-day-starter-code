@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class SpaDayController {
 
     @GetMapping
-    public String customerForm () {
+    public String customerForm (Model model) {
+        model.addAttribute("title", "Service Selection");
         return "serviceSelection";
     }
 
@@ -23,6 +24,7 @@ public class SpaDayController {
         Client newClient = new Client(skintype, manipedi);
         newClient.setAppropriateFacials(skintype);
         model.addAttribute("client" , newClient);
+        model.addAttribute("title", "Service Selection");
 
         return "menu";
     }

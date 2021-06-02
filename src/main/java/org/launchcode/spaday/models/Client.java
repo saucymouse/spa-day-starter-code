@@ -37,31 +37,28 @@ public class Client {
         if (skinType.equals("oily")) {
             if (facialType.equals("Microdermabrasion") || facialType.equals("Rejuvenating")) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
-        }
-        else if (skinType.equals("combination")) {
+
+        } else if (skinType.equals("combination")) {
             if (facialType.equals("Microdermabrasion") || facialType.equals("Rejuvenating") || facialType.equals("Enzyme Peel")) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
-        }
-        else if (skinType.equals("normal")) {
+
+        } else if (skinType.equals("normal")) {
             return true;
-        }
-        else if (skinType.equals("dry")) {
+
+        } else if (skinType.equals("dry")) {
             if (facialType.equals("Rejuvenating") || facialType.equals("Hydrofacial")) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
-        }
-        else {
+
+        } else {
             return true;
         }
     }
@@ -73,8 +70,8 @@ public class Client {
         facials.add("Rejuvenating");
         facials.add("Enzyme Peel");
 
-        for (int i = 0; i < facials.size(); i ++) {
-            if (checkSkinType(skinType,facials.get(i))) {
+        for (int i = 0; i < facials.size(); i++) {
+            if (checkSkinType(skinType, facials.get(i))) {
                 appropriateFacials.add(facials.get(i));
             }
         }
