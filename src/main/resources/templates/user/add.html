@@ -3,22 +3,34 @@
 <head th:replace="fragments :: head"></head>
 
 <body>
-<p th:text="${error}"></p>
 
 <div class="form-group">
+
     <form method="post">
         <div class="form-group"></div>
         <p>Create username and password:</p>
-        <label>E-mail: <br><input type="email" name="email" placeholder="Email" th:value="${email}"
-                                  class="form-control"></label><br>
-        <label>Username: <br><input type="text" name="username" placeholder="Enter username" th:value="${username}"
-                                    class="form-control"></label><br>
-        <label>Password: <br><input type="password" name="password" placeholder="Enter password"
-                                    class="form-control"></label><br>
-        <label>Verify password: <br><input type="password" name="verify" placeholder="Verify password"
-                                           class="form-control"></label><br>
+        <label>E-mail: <br><input placeholder="Email" th:field="${user.email}"
+                                  class="form-control"></label>
+        <p class="error" th:errors="${user.email}"></p>
+        <br>
+
+        <label>Username: <br><input type="text" name="username" placeholder="Enter username" th:field="${user.username}"
+                                    class="form-control"></label>
+        <p class="error" th:errors="${user.username}"></p>
+        <br>
+
+        <label>Password: <br><input type="password" th:field="${user.password}" placeholder="Enter password"
+                                    class="form-control"></label>
+        <p class="error" th:errors="${user.password}"></p>
+        <br>
+
+        <label>Verify password: <br><input type="password" th:field="${user.verifyPassword}" placeholder="Verify password"
+                                           class="form-control"></label>
+        <p class="error" th:errors="${user.verifyPassword}"></p>
+        <br>
         <input type="submit" value="Submit">
     </form>
+
 </div>
 
 </body>
