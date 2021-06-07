@@ -10,8 +10,8 @@ public class SpaDayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpaDayApplication.class, args);
-		User user1 = new User("Will", "will@will.com", "password");
-		User user2 = new User("Steve", "steve@steve.com", "password");
+		User user1 = new User("mickeymouse", "mickey@disney.org", "password");
+		User user2 = new User("Barbara", "barbara.mangiello@makeupworld.com", "password");
 		User user3 = new User("Bob", "bob@bob.com", "password");
 		UserData.add(user1);
 		UserData.add(user2);
