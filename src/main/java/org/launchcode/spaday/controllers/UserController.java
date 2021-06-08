@@ -14,7 +14,7 @@ import javax.validation.Valid;
 public class UserController {
 
     @GetMapping("add")
-    public String displayAddUserForm(Model model) {
+    public String displayAddUserForm(Model model, @ModelAttribute User user) {
         model.addAttribute("title", "Add User");
         //TODO attributeName is optional
         model.addAttribute(new User());
