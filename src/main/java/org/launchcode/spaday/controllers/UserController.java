@@ -18,9 +18,10 @@ public class UserController {
 
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
+        model.addAttribute("title", "Add User");
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-        model.addAttribute("title", "Add User");
+
         if (verify.equals(user.getPassword())) {
             UserData.add(user);
             model.addAttribute("users", UserData.getAll());
